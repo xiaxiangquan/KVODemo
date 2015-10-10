@@ -14,6 +14,11 @@
 		7AC628D91AA1603C00C558EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AC628D81AA1603C00C558EB /* Images.xcassets */; };
 		7AC628DC1AA1603C00C558EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AC628DA1AA1603C00C558EB /* LaunchScreen.xib */; };
 		7AC628E81AA1603D00C558EB /* KVODemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC628E71AA1603D00C558EB /* KVODemoTests.m */; };
+		7AC628F61AA1618000C558EB /* LabColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC628F51AA1618000C558EB /* LabColor.m */; };
+		7AC628F81AA164EC00C558EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC628F71AA164EC00C558EB /* Foundation.framework */; };
+		7AC628FA1AA1655F00C558EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC628F91AA1655F00C558EB /* CoreGraphics.framework */; };
+		7AC628FC1AA1656800C558EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC628FB1AA1656800C558EB /* UIKit.framework */; };
+		7AC628FF1AA16F3100C558EB /* KeyValueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC628FE1AA16F3100C558EB /* KeyValueObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,13 @@
 		7AC628E11AA1603D00C558EB /* KVODemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVODemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC628E61AA1603D00C558EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AC628E71AA1603D00C558EB /* KVODemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVODemoTests.m; sourceTree = "<group>"; };
+		7AC628F41AA1618000C558EB /* LabColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabColor.h; sourceTree = "<group>"; };
+		7AC628F51AA1618000C558EB /* LabColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabColor.m; sourceTree = "<group>"; };
+		7AC628F71AA164EC00C558EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7AC628F91AA1655F00C558EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7AC628FB1AA1656800C558EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7AC628FD1AA16F3100C558EB /* KeyValueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueObserver.h; sourceTree = "<group>"; };
+		7AC628FE1AA16F3100C558EB /* KeyValueObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObserver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC628FC1AA1656800C558EB /* UIKit.framework in Frameworks */,
+				7AC628FA1AA1655F00C558EB /* CoreGraphics.framework in Frameworks */,
+				7AC628F81AA164EC00C558EB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +81,9 @@
 				7AC628CA1AA1603C00C558EB /* KVODemo */,
 				7AC628E41AA1603D00C558EB /* KVODemoTests */,
 				7AC628C91AA1603C00C558EB /* Products */,
+				7AC628FB1AA1656800C558EB /* UIKit.framework */,
+				7AC628F91AA1655F00C558EB /* CoreGraphics.framework */,
+				7AC628F71AA164EC00C558EB /* Foundation.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +103,10 @@
 				7AC628D01AA1603C00C558EB /* AppDelegate.m */,
 				7AC628D21AA1603C00C558EB /* ViewController.h */,
 				7AC628D31AA1603C00C558EB /* ViewController.m */,
+				7AC628FD1AA16F3100C558EB /* KeyValueObserver.h */,
+				7AC628FE1AA16F3100C558EB /* KeyValueObserver.m */,
+				7AC628F41AA1618000C558EB /* LabColor.h */,
+				7AC628F51AA1618000C558EB /* LabColor.m */,
 				7AC628D51AA1603C00C558EB /* Main.storyboard */,
 				7AC628D81AA1603C00C558EB /* Images.xcassets */,
 				7AC628DA1AA1603C00C558EB /* LaunchScreen.xib */,
@@ -219,6 +241,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC628FF1AA16F3100C558EB /* KeyValueObserver.m in Sources */,
+				7AC628F61AA1618000C558EB /* LabColor.m in Sources */,
 				7AC628D41AA1603C00C558EB /* ViewController.m in Sources */,
 				7AC628D11AA1603C00C558EB /* AppDelegate.m in Sources */,
 				7AC628CE1AA1603C00C558EB /* main.m in Sources */,
@@ -412,6 +436,7 @@
 				7AC628ED1AA1603D00C558EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7AC628EE1AA1603D00C558EB /* Build configuration list for PBXNativeTarget "KVODemoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +445,7 @@
 				7AC628F01AA1603D00C558EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
