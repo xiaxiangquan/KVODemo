@@ -18,9 +18,5 @@
 
 
 
-- (void)incrementCount;
-//- (NSInteger)countOfNumbers;
-//- (id)objectInNumbersAtIndex:(NSInteger)index;
-
 
 @end

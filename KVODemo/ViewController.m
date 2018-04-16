@@ -1,4 +1,4 @@
-//
+///
 //  ViewController.m
 //  KVODemo
 //
@@ -28,6 +28,7 @@
 @property (nonatomic, strong) id colorObserveToken;
 
 @property (nonatomic, strong) KVOTest *test;
+@property (nonatomic, strong) KVCTest *kvcTest;
 
 @end
 
@@ -61,28 +62,30 @@
     /*
      KVC
      SET
-     
+     */
     KVCTest *kvc = [[KVCTest alloc] init];
-    [kvc setValue:@"www" forKey:@"name"];
+    [kvc setValue:nil forKey:@"name"];
+    [kvc setValue:nil forKey:@"num"];
+
 //    NSLog(@"%@",[kvc valueForKey:@"name"]);
-    */
+    
      /*
       GET
     */
     
-    KVCTest* arr = [KVCTest new];
-    id num = [arr valueForKey:@"num"];
-    NSLog(@"%@",num);
-    UILabel *ar = [arr valueForKey:@"number"];
+    self.kvcTest = [KVCTest new];
+    id num = [self.kvcTest valueForKey:@"num"];
+    NSLog(@"num = %@",num);
+    id ar = [self.kvcTest valueForKey:@"test"];
     NSLog(@"%@",NSStringFromClass([ar class]));
-    NSLog(@"0:%@ ",ar );
-
-//    NSLog(@"0:%@     1:%@     2:%@     3:%@",ar[0],ar[1],ar[2],ar[3]);
+//    NSLog(@" --- %@ ",ar );
+//
+//    NSLog(@"0:%@     1:%@     2:%@     3:%@",ar[0],ar[1]);
 //    [arr incrementCount];                                                                            //count加1
 //    NSLog(@"%lu",(unsigned long)[ar count]);                                                         //打印出1
 //    [arr incrementCount];                                                                            //count再加1
 //    NSLog(@"%lu",(unsigned long)[ar count]);                                                         //打印出2
-//    
+//
 //    [arr setValue:@"newName" forKey:@"arrName"];
 //    NSString* name = [arr valueForKey:@"arrName"];
 //    NSLog(@"%@",name);
