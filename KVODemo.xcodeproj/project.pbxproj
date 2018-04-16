@@ -19,6 +19,9 @@
 		7AC628FA1AA1655F00C558EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC628F91AA1655F00C558EB /* CoreGraphics.framework */; };
 		7AC628FC1AA1656800C558EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC628FB1AA1656800C558EB /* UIKit.framework */; };
 		7AC628FF1AA16F3100C558EB /* KeyValueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC628FE1AA16F3100C558EB /* KeyValueObserver.m */; };
+		B552271A207CADA50054DAEB /* KVOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B5522719207CADA50054DAEB /* KVOTest.m */; };
+		B5C89369207DDF040022D3E0 /* KVCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C89368207DDF040022D3E0 /* KVCTest.m */; };
+		B5DD7E6D207B469F0083CB46 /* NSKVONotifyingLabColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DD7E6C207B469F0083CB46 /* NSKVONotifyingLabColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,12 @@
 		7AC628FB1AA1656800C558EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7AC628FD1AA16F3100C558EB /* KeyValueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueObserver.h; sourceTree = "<group>"; };
 		7AC628FE1AA16F3100C558EB /* KeyValueObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObserver.m; sourceTree = "<group>"; };
+		B5522718207CADA50054DAEB /* KVOTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOTest.h; sourceTree = "<group>"; };
+		B5522719207CADA50054DAEB /* KVOTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOTest.m; sourceTree = "<group>"; };
+		B5C89367207DDF040022D3E0 /* KVCTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCTest.h; sourceTree = "<group>"; };
+		B5C89368207DDF040022D3E0 /* KVCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCTest.m; sourceTree = "<group>"; };
+		B5DD7E6B207B469F0083CB46 /* NSKVONotifyingLabColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSKVONotifyingLabColor.h; sourceTree = "<group>"; };
+		B5DD7E6C207B469F0083CB46 /* NSKVONotifyingLabColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSKVONotifyingLabColor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +112,16 @@
 				7AC628D01AA1603C00C558EB /* AppDelegate.m */,
 				7AC628D21AA1603C00C558EB /* ViewController.h */,
 				7AC628D31AA1603C00C558EB /* ViewController.m */,
+				B5C89367207DDF040022D3E0 /* KVCTest.h */,
+				B5C89368207DDF040022D3E0 /* KVCTest.m */,
+				B5522718207CADA50054DAEB /* KVOTest.h */,
+				B5522719207CADA50054DAEB /* KVOTest.m */,
 				7AC628FD1AA16F3100C558EB /* KeyValueObserver.h */,
 				7AC628FE1AA16F3100C558EB /* KeyValueObserver.m */,
 				7AC628F41AA1618000C558EB /* LabColor.h */,
 				7AC628F51AA1618000C558EB /* LabColor.m */,
+				B5DD7E6B207B469F0083CB46 /* NSKVONotifyingLabColor.h */,
+				B5DD7E6C207B469F0083CB46 /* NSKVONotifyingLabColor.m */,
 				7AC628D51AA1603C00C558EB /* Main.storyboard */,
 				7AC628D81AA1603C00C558EB /* Images.xcassets */,
 				7AC628DA1AA1603C00C558EB /* LaunchScreen.xib */,
@@ -190,6 +205,7 @@
 				TargetAttributes = {
 					7AC628C71AA1603C00C558EB = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 3DZEF4G7P9;
 					};
 					7AC628E01AA1603D00C558EB = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -241,11 +257,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C89369207DDF040022D3E0 /* KVCTest.m in Sources */,
 				7AC628FF1AA16F3100C558EB /* KeyValueObserver.m in Sources */,
 				7AC628F61AA1618000C558EB /* LabColor.m in Sources */,
 				7AC628D41AA1603C00C558EB /* ViewController.m in Sources */,
 				7AC628D11AA1603C00C558EB /* AppDelegate.m in Sources */,
+				B552271A207CADA50054DAEB /* KVOTest.m in Sources */,
 				7AC628CE1AA1603C00C558EB /* main.m in Sources */,
+				B5DD7E6D207B469F0083CB46 /* NSKVONotifyingLabColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3DZEF4G7P9;
 				INFOPLIST_FILE = KVODemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -377,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3DZEF4G7P9;
 				INFOPLIST_FILE = KVODemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

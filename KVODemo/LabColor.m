@@ -24,6 +24,16 @@ static double D65TristimulusValues[3] = {95.047, 100.0, 108.883};
     return self;
 }
 
+/*
+- (void)willChangeValueForKey:(NSString *)key {
+    
+}
+
+- (void)didChangeValueForKey:(NSString *)key {
+    
+}
+ */
+
 - (NSString *)description{
     return [NSString stringWithFormat:@"<%@: %p> {%g, %g, %g}", [self class], self, self.lComponent, self.aComponent, self.bComponent];
 }

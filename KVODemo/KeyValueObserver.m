@@ -60,6 +60,7 @@
 
 
 - (void)dealloc{
+    NSLog(@"销毁 == %@",[self class]);
     [self.observedObject removeObserver:self forKeyPath:self.keyPath];
 }
 
