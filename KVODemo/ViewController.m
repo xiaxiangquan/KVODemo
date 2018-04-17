@@ -12,7 +12,7 @@
 #import <objc/runtime.h>
 #import "KVOTest.h"
 #import "KVCTest.h"
-
+#import "KVCCollectionOperatorsTest.h"
 
 @interface ViewController ()
 {
@@ -90,9 +90,126 @@
 //    NSString* name = [arr valueForKey:@"arrName"];
 //    NSLog(@"%@",name);
    
+    
+    // kvc 集合操作（基本数据类型）
+    KVCCollectionOperatorsTest *collectionTest = [[KVCCollectionOperatorsTest alloc] init];
+    collectionTest.name = @"aaa";
+    collectionTest.count = 10;
+    
+    KVCCollectionOperatorsTest *collectionTest2 = [[KVCCollectionOperatorsTest alloc] init];
+    collectionTest2.name = @"bbb";
+    collectionTest2.count = 20;
+    
+    KVCCollectionOperatorsTest *collectionTest3 = [[KVCCollectionOperatorsTest alloc] init];
+    collectionTest3.name = @"aaa";
+    collectionTest3.count = 30;
+
+    NSArray *collectionArr = @[collectionTest, collectionTest2, collectionTest3];
+    NSNumber *countNum = [collectionArr valueForKeyPath:@"@count"];
+    NSNumber *avgNum = [collectionArr valueForKeyPath:@"@avg.count"];
+    NSNumber *maxNum = [collectionArr valueForKeyPath:@"@max.count"];
+    NSNumber *minNum = [collectionArr valueForKeyPath:@"@min.count"];
+    NSNumber *sunNum = [collectionArr valueForKeyPath:@"@sum.count"];
+
+    // 若操作对象(数组/集合)内的元素本身就是 NSNumber 对象,那么可以这样写.
+    NSArray *collectionArr2 = @[@(collectionTest.count), @(collectionTest2.count), @(collectionTest3.count)];
+    NSNumber *countNum2 = [collectionArr2 valueForKeyPath:@"@count"];
+    NSNumber *avgNum2 = [collectionArr2 valueForKeyPath:@"@avg.self"];
+    NSNumber *maxNum2 = [collectionArr2 valueForKeyPath:@"@max.self"];
+    NSNumber *minNum2 = [collectionArr2 valueForKeyPath:@"@min.self"];
+    NSNumber *sunNum2 = [collectionArr2 valueForKeyPath:@"@sum.self"];
+
+    NSLog(@" -- %@",countNum);
+    NSLog(@" -- %@",avgNum);
+    NSLog(@" -- %@",maxNum);
+    NSLog(@" -- %@",minNum);
+    NSLog(@" -- %@",sunNum);
+    
+    NSLog(@" ++ %@",countNum2);
+    NSLog(@" ++ %@",avgNum2);
+    NSLog(@" ++ %@",maxNum2);
+    NSLog(@" ++ %@",minNum2);
+    NSLog(@" ++ %@",sunNum2);
+    
+    
+    /*
+     对象集合操作
+     * @unionOfObjects:
+     * @distinctUnionOfObjects:
+     */
+    NSArray *unionOfObjects = [collectionArr valueForKeyPath:@"@unionOfObjects.name"];
+    NSArray *distinctUnionOfObjects = [collectionArr valueForKeyPath:@"@distinctUnionOfObjects.name"];
+    NSLog(@"unionOfObjects = %@",unionOfObjects);
+    NSLog(@"distinctUnionOfObjects = %@",distinctUnionOfObjects);
+
+    
+    /*
+     数组和集合操作符
+     * @distinctUnionOfArrays:
+     * @unionOfArrays:
+     * @distinctUnionOfSets:
+     */
+    KVCCollectionOperatorsTest *arrAndSetTest = [[KVCCollectionOperatorsTest alloc] init];
+    arrAndSetTest.name = @"aaa";
+    arrAndSetTest.count = 10;
+    
+    KVCCollectionOperatorsTest *arrAndSetTest2 = [[KVCCollectionOperatorsTest alloc] init];
+    arrAndSetTest2.name = @"bbb";
+    arrAndSetTest2.count = 20;
+    
+    KVCCollectionOperatorsTest *arrAndSetTest3 = [[KVCCollectionOperatorsTest alloc] init];
+    arrAndSetTest3.name = @"aaa";
+    arrAndSetTest3.count = 30;
+    
+    
+    KVCCollectionOperatorsTest *arrAndSetTest4 = [[KVCCollectionOperatorsTest alloc] init];
+    arrAndSetTest4.name = @"arrAndSetTest";
+    arrAndSetTest4.count = 10;
+    
+    KVCCollectionOperatorsTest *arrAndSetTest5 = [[KVCCollectionOperatorsTest alloc] init];
+    arrAndSetTest5.name = @"arrAndSetTest2";
+    arrAndSetTest5.count = 20;
+    
+    KVCCollectionOperatorsTest *arrAndSetTest6 = [[KVCCollectionOperatorsTest alloc] init];
+    arrAndSetTest6.name = @"arrAndSetTest3";
+    arrAndSetTest6.count = 30;
+    
+    NSArray *arrayAndSetCollectionArr = @[arrAndSetTest, arrAndSetTest2, arrAndSetTest3];
+    NSArray *arrayAndSetCollectionArr2 = @[arrAndSetTest4, arrAndSetTest5, arrAndSetTest6];
+
+    NSMutableArray *totalCount = [NSMutableArray array];
+    [totalCount addObject:arrayAndSetCollectionArr];
+    [totalCount addObject:arrayAndSetCollectionArr2];
+    
+    NSLog(@"--- %@",[totalCount valueForKeyPath:@"@unionOfArrays.name"]);
+    NSLog(@"+++ %@",[totalCount valueForKeyPath:@"@distinctUnionOfArrays.name"]);
+
+    
+    
+    
+    /* KVC 应用 改变 获取系统类 成员变量*/
+    unsigned int count = 0;
+    // 拷贝出所胡的成员变量列表
+    Ivar *ivars = class_copyIvarList([UITextField class], &count);
+    for (int i = 0; i<count; i++) {
+        // 取出成员变量
+        Ivar ivar = *(ivars + i);
+        // 打印成员变量名字
+        NSLog(@"%s", ivar_getName(ivar));
+        // 打印成员变量的数据类型
+//        NSLog(@"%s", ivar_getTypeEncoding(ivar));
+    }
+    // 释放
+    free(ivars);
+
+    // 修改点位文字颜色
+    UILabel *placeholderLabel = [self valueForKeyPath:@"_placeholderLabel"];
+    placeholderLabel.textColor = [UIColor redColor];
+    // 或者这样
+    [self setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
+
 }
 
- 
 
 - (void)setTest:(KVOTest *)test {
     [self willChangeValueForKey:@"test"];

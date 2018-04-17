@@ -19,6 +19,7 @@
 		7AC628FA1AA1655F00C558EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC628F91AA1655F00C558EB /* CoreGraphics.framework */; };
 		7AC628FC1AA1656800C558EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC628FB1AA1656800C558EB /* UIKit.framework */; };
 		7AC628FF1AA16F3100C558EB /* KeyValueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC628FE1AA16F3100C558EB /* KeyValueObserver.m */; };
+		B526476E208492F50055E9A4 /* KVCCollectionOperatorsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B526476D208492F50055E9A4 /* KVCCollectionOperatorsTest.m */; };
 		B552271A207CADA50054DAEB /* KVOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B5522719207CADA50054DAEB /* KVOTest.m */; };
 		B5C89369207DDF040022D3E0 /* KVCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C89368207DDF040022D3E0 /* KVCTest.m */; };
 		B5DD7E6D207B469F0083CB46 /* NSKVONotifyingLabColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DD7E6C207B469F0083CB46 /* NSKVONotifyingLabColor.m */; };
@@ -55,6 +56,8 @@
 		7AC628FB1AA1656800C558EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7AC628FD1AA16F3100C558EB /* KeyValueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueObserver.h; sourceTree = "<group>"; };
 		7AC628FE1AA16F3100C558EB /* KeyValueObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObserver.m; sourceTree = "<group>"; };
+		B526476C208492F50055E9A4 /* KVCCollectionOperatorsTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCCollectionOperatorsTest.h; sourceTree = "<group>"; };
+		B526476D208492F50055E9A4 /* KVCCollectionOperatorsTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCCollectionOperatorsTest.m; sourceTree = "<group>"; };
 		B5522718207CADA50054DAEB /* KVOTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOTest.h; sourceTree = "<group>"; };
 		B5522719207CADA50054DAEB /* KVOTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOTest.m; sourceTree = "<group>"; };
 		B5C89367207DDF040022D3E0 /* KVCTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCTest.h; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 				7AC628D01AA1603C00C558EB /* AppDelegate.m */,
 				7AC628D21AA1603C00C558EB /* ViewController.h */,
 				7AC628D31AA1603C00C558EB /* ViewController.m */,
+				B526476C208492F50055E9A4 /* KVCCollectionOperatorsTest.h */,
+				B526476D208492F50055E9A4 /* KVCCollectionOperatorsTest.m */,
 				B5C89367207DDF040022D3E0 /* KVCTest.h */,
 				B5C89368207DDF040022D3E0 /* KVCTest.m */,
 				B5522718207CADA50054DAEB /* KVOTest.h */,
@@ -259,6 +264,7 @@
 			files = (
 				B5C89369207DDF040022D3E0 /* KVCTest.m in Sources */,
 				7AC628FF1AA16F3100C558EB /* KeyValueObserver.m in Sources */,
+				B526476E208492F50055E9A4 /* KVCCollectionOperatorsTest.m in Sources */,
 				7AC628F61AA1618000C558EB /* LabColor.m in Sources */,
 				7AC628D41AA1603C00C558EB /* ViewController.m in Sources */,
 				7AC628D11AA1603C00C558EB /* AppDelegate.m in Sources */,
